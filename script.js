@@ -61,8 +61,4 @@ if('IntersectionObserver' in window&&!reduce){
   targets.forEach(function(el){el.classList.add('in');});
 }
 
-// Gmail compose links (email built in JS so Cloudflare can't rewrite it)
-document.querySelectorAll('a[data-gmail]').forEach(function(a){var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');a.target='_blank';a.rel='noopener';});
-var et=document.getElementById('emailText');if(et)et.textContent='mafullerspantry'+'@'+'gmail.com';
-
 var yr=document.getElementById('year');if(yr)yr.textContent=new Date().getFullYear();
